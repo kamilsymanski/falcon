@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= content_for?(:title) ? "#{t('application.title')} :: #{yield(:title)}" : t('application.title') %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= styx_initialize %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/twitter_init' %>
+</head>
+<body>
+  <%= render 'layouts/fb_init' %>
+  <div id="wrapper">
+    <%= render 'layouts/account_navigation' %>
+    <div class="container">
+      <div class="content">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </div>
+    </div>
+    <div class="push"></div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p class="brand"><%=raw t('application.copyright') %></p>
+    </div>
+  </footer>
+</body>
+</html>

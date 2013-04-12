@@ -1,0 +1,44 @@
+<div class="picture-details" data-id="<%= picture.id %>">
+  <div class="image">
+    <% if picture.image.present? %>
+      <%= image_tag picture.image.url(:preview) %>
+    <% end %>
+  </div>
+  <div class="details">
+    <dl>
+      <dt><%= Picture.human_attribute_name(:title) %></dt>
+      <dd><%= picture.title %></dd>
+      <dt><%= Picture.human_attribute_name(:style_ids) %></dt>
+      <dd><%= names_list(picture.styles) %></dd>
+      <dt><%= Picture.human_attribute_name(:gender) %></dt>
+      <dd><%= picture.gender_humanize %></dd>
+      <% unless picture.brands.blank? %>
+        <dt><%= Picture.human_attribute_name(:brands) %></dt>
+        <dd><%= picture.brands %></dd>
+      <% end %>
+      <% unless picture.cost.blank? %>
+        <dt><%= Picture.human_attribute_name(:cost) %></dt>
+        <dd><%= picture.cost %></dd>
+      <% end %>
+      <% unless picture.dressing_tips.blank? %>
+        <dt><%= Picture.human_attribute_name(:dressing_tips) %></dt>
+        <dd><%= picture.dressing_tips %></dd>
+      <% end %>
+      <% unless picture.where_to_buy.blank? %>
+        <dt><%= Picture.human_attribute_name(:where_to_buy) %></dt>
+        <dd><%= picture.where_to_buy %></dd>
+      <% end %>
+    </dl>
+  </div>
+
+  <%= render 'share', :picture => picture %>
+  <%= render 'likes', :likeable => picture, :likes_count => likes_count, :like => like %>
+
+  <div class="actions">
+    <%= link_to_with_icon t('helpers.actions.close'), 'zoom-out', '#!/index' %>
+    <%= link_to_with_icon(t('helpers.actions.edit'), 'pencil', "#!/pictures/#{picture.id}/edit") if picture.is_owner?(current_user) %>
+    <%= link_to_with_icon(t('helpers.actions.delete'), 'trash', account_picture_path(picture), :method => :delete, :confirm => t('helpers.actions.confirmation'), :remote => true) if picture.is_owner?(current_user) %>
+  </div>
+
+  <%= render 'account/comments/comments_box', :commentable => picture %>
+</div>

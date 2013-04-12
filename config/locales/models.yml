@@ -1,0 +1,29 @@
+en:
+  activerecord:
+    attributes:
+      profile:
+        username: "Username"
+        first_name: "First name"
+        last_name: "Last name"
+      avatar:
+        image: "Avatar"
+      business_profile:
+        style_ids: "Styles"
+        audience_ids: "Audience"
+        age_group_ids: "Age Groups"
+      picture:
+        title: "Title"
+        style_ids: "Styles"
+        gender: "Gender"
+        dressing_tips: "Dressing Tips"
+        brands: "Brands"
+        cost: "Cost"
+        where_to_buy: "Where to Buy"
+        original_image: "Image"
+        formatted_image: "Image"
+    errors:
+      models:
+        profile:
+          attributes:
+            username:
+              invalid: "is invalid (only letters and digits are allowed)"

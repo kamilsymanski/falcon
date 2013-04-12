@@ -1,0 +1,154 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  application:
+    title: "Fashion Invited"
+    admin_area: "Admin"
+    copyright: "&copy; Fashion Invited 2012"
+  helpers:
+    actions:
+      actions: "Actions"
+      new: "New"
+      edit: "Edit"
+      view: "View"
+      destroy: "Destroy"
+      create: "Create"
+      update: "Update"
+      delete: "Delete"
+      change: "Change"
+      sign_in: "Sign in"
+      free_sign_in: "Free Member Sign in"
+      affiliate_sign_in: "Affiliate Sign in"
+      sign_out: "Sign out"
+      sign_up: "Sign up"
+      send: "Send"
+      test: "Test"
+      search: "Search"
+      clear: "Clear"
+      change: "Change"
+      details: "Details"
+      close: "Close"
+      cancel: "Cancel"
+      forgot_your_password: "Forgot your password?"
+      resend_confirmation_instruction: "Resent Confirmation"
+      change_password: "Change Password"
+      profile: "Profile"
+      edit_profile: "Edit Profile"
+      edit_language_settings: "Edit Language Settings"
+      add_more_pictures: "Add More Pictures"
+      confirmation: "Are you sure?"
+      comment: "Comment"
+    human_detector_error: "Sorry, look like you are robot."
+    please_select: "Please Select"
+    empty_list: "There are no items to display."
+    items_per_page: "Items per Page:"
+    never: "never"
+  flash:
+    actions:
+      create:
+        notice: "%{resource_name} was created successfully."
+      destroy:
+        notice: "%{resource_name} was deleted successfully."
+      update:
+        notice: "%{resource_name} was updated successfully."
+  social_media:
+    share_on_twitter: "Share on Twitter."
+    tweet_template: "Hey! Check out %{url}."
+    facebook_caption: "Fashion Invited"
+    share_on_pinterest: "Share on Pinterest."
+  account:
+    sessions:
+      new:
+        title: "Sign in"
+    registrations:
+      new:
+        title: "Sign up"
+    passwords:
+      new:
+        title: "Forgot your password?"
+        description: "Send me reset instructions:"
+      edit:
+        title: "Change password"
+        new_password: "New Password"
+        title: "Change Password"
+        password_hint: "leave blank if you don't want to change it"
+        current_password_hint: "we need your current password to confirm your changes"
+    confirmations:
+      new:
+        title: "Resend confirmation instructions"
+    profiles:
+      edit:
+        title: "Edit Profile"
+        username_warning: "<strong>Warning!</strong> You can not change your username after created."
+    language_settings:
+      edit:
+        title: "Edit Language Settings"
+    pictures:
+      form:
+        drop_zone_hint: "Drop image here or click to Upload"
+        filters_title: "Apply Filter"
+      list:
+        title: "Pictures"
+    comments:
+      no_comments: "There is no comments for %{commentable}. Be the first."
+      author_title_format: "%{author} %{time} ago"
+    likes:
+      success: "You like has been saved successfully."
+      error: "Some error was occurred."
+  affiliate:
+    sessions:
+      new:
+        title: "Sign in as Affiliate"
+    registrations:
+      new:
+        title: "Sign up as Affiliate"
+        business_name_warning: "<strong>Warning!</strong> You can not change your business name after created."
+    passwords:
+      new:
+        title: "Forgot your password?"
+        description: "Send me reset instructions:"
+      edit:
+        title: "Change password"
+        new_password: "New Password"
+        title: "Change Password"
+        password_hint: "leave blank if you don't want to change it"
+        current_password_hint: "we need your current password to confirm your changes"
+    confirmations:
+      new:
+        title: "Resend confirmation instructions"
+    profiles:
+      edit:
+        title: "Edit Profile"
+        business_name_warning: "<strong>Warning!</strong> You can not change your business name after created."
+    language_settings:
+      edit:
+        title: "Edit Language Settings"
+  admin:
+    sessions:
+      new:
+        title: "Sign in as Admin"
+    passwords:
+      new:
+        title: "Forgot your password?"
+        description: "Send me reset instructions:"
+      edit:
+        title: "Change password"
+        new_password: "New Password"
+        title: "Change Password"
+        password_hint: "leave blank if you don't want to change it"
+        current_password_hint: "we need your current password to confirm your changes"
+    sections:
+      accounts: "Accounts"
+      profile: "Profile"
+      admins: "Admins"
+      affiliates: "Affiliates"
+    filters:
+      title: "Filters"
+      email_contains: "Email Contains"
+      username_contains: "Username Contains"
+      first_name_contains: "First Name Contains"
+      last_name_contains: "Last Name Contains"
+      country_contains: "Country Contains"
+      business_name_contains: "Business Name Contains"
+      confirmed: "Confirmed"

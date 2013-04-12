@@ -1,0 +1,43 @@
+<%= content_for :title do %>
+  <%= @profile.account %>
+<% end %>
+
+<div class="profile">
+  <div class="well">
+    <div class="row">
+      <div class="avatar">
+        <%= image_tag @profile.avatar.image.url(:thumb) %>
+        <%= edit_link_to('Edit Profile', edit_account_profile_path, :class => 'edit-profile') if is_current_profile?(@profile) %>
+      </div>
+      <div class="details">
+        <dl>
+          <dt><%= Profile.human_attribute_name(:username) %>:</dt>
+          <dd>
+            <% if is_current_profile?(@profile) %>
+              <%= edit_link_to(text_or_blank(@profile.username), edit_account_profile_path) %>
+            <% else %>
+              <%= text_or_blank(@profile.username) %>
+            <% end %>
+          </dd>
+        </dl>
+        <dl>
+          <dt><%= Profile.human_attribute_name(:status) %>:</dt>
+          <dd>
+            <% if is_current_profile?(@profile) %>
+              <%= edit_link_to(text_or_blank('Working'), '#') if is_current_profile?(@profile) %>
+            <% else %>
+              <%= text_or_blank('Working') %>
+            <% end %>
+          </dd>
+        </dl>
+      </div>
+      <div class="about">
+        Introduction about your self. <%= edit_link_to(''.html_safe, '#', :class => 'edit') if is_current_profile?(@profile) %>
+      </div>
+    </div>
+  </div>
+  <div class="well">
+    <div id="pictures">
+    </div>
+  </div>
+</div>

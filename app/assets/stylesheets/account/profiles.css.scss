@@ -1,0 +1,197 @@
+.profile {
+  .edit-profile {
+    float: left;
+    clear: both;
+    margin-top: 10px;
+  }
+
+  .blank {
+    color: #aaa;
+  }
+
+  .avatar {
+    float: left;
+    width: 100px;
+    margin: 0 20px;
+  }
+
+  .details {
+    float: left;
+    width: 200px;
+    margin: 0 20px;
+  }
+
+  .about {
+    float: right;
+    width: 400px;
+    margin: 0 20px;
+    padding: 20px 20px;
+    background: #D9EDF7;
+    @include border-radius(5px);
+
+    a.edit {
+      float: right;
+      margin: -15px -15px 0 0;
+    }
+  }
+
+  #pictures {
+    min-height: 200px;
+
+    .header {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin-bottom: $baseLineHeight * 1.5;
+      font-size: $baseFontSize * 1.5;
+      line-height: $baseLineHeight * 2;
+      color: $grayDark;
+      border: 0;
+
+      a {
+        float: right;
+      }
+    }
+
+    .upload {
+      .drop-zone {
+        height: 210px;
+        border: 5px #aaa dashed;
+        text-align: center;
+        line-height: 200px;
+        font-size: 30px;
+
+        img {
+          border: 1px #aaa dotted;
+        }
+      }
+
+      input.hidden-file-upload {
+        width: 100%;
+        height: 210px;
+        margin-top: -250px;
+        cursor: pointer;
+        @include opacity(0);
+        outline: none;
+      }
+
+      .filters {
+        padding: 10px 0;
+        text-align: center;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+        &.hidden {
+          display: none;
+        }
+
+        .samples {
+          a {
+            display: inline-block;
+            border: 1px solid #aaa;
+            margin: 0 5px;
+
+            &:hover {
+              border: 1px solid rgba(82,168,236,.8);
+              outline: 0;
+              outline: thin dotted \9; /* IE6-9 */
+              @include box-shadow((inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)));
+            }
+
+            &.active {
+              border: 2px solid #468847;
+              @include box-shadow((inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #468847));
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+
+    .picture {
+      padding: 10px 0;
+      border-top: 1px solid #e5e5e5;
+      @include clearfix();
+
+      &:hover {
+        background: #eee;
+      }
+
+      .actions {
+        float: left;
+        clear: both;
+        margin: 10px 20px 0;
+
+        a {
+          margin-right: 10px;
+        }
+      }
+
+      .image {
+        float:left;
+        margin: 0 20px;
+
+        img {
+          border: 1px #aaa dotted;
+        }
+      }
+
+      .details {
+        float:left;
+        width: 500px;
+        margin: 0 20px;
+      }
+    }
+
+    .picture-form {
+      background: #eee;
+
+      .form {
+        padding: 0 20px;
+      }
+    }
+
+    .picture-details {
+      padding: 10px 0;
+      border-top: 1px solid #e5e5e5;
+      background: #eee;
+      @include clearfix();
+
+      .actions {
+        float: left;
+        clear: both;
+        margin: 10px 20px 0;
+
+        a {
+          margin-right: 10px;
+        }
+      }
+
+      .image {
+        float:left;
+        margin: 0 20px;
+
+        img {
+          border: 1px #aaa dotted;
+        }
+      }
+
+      .details {
+        float:left;
+        width: 500px;
+        margin: 0 20px;
+      }
+    }
+
+    .share {
+      float: right;
+      margin-right: 10px;
+    }
+
+    .likes {
+      float: right;
+      clear: right;
+      margin: 10px;
+    }
+  }
+}
